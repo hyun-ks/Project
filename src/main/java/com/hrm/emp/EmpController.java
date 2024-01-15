@@ -15,6 +15,10 @@ public class EmpController {
 		m.addAttribute("emp", e.empall());
         return "/emp/list";
     }
+	@GetMapping("/emp/insert")
+	public String EmpControllerform() {
+		return "emp/insertform";
+	}
 
 
 }

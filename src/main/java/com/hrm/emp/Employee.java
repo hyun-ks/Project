@@ -1,7 +1,6 @@
 package com.hrm.emp;
 
-import java.sql.Blob;
-import java.sql.Date;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +21,7 @@ public class Employee {
     private int em_salaly;
     private int auth_set;
     private int vac_no;
+    private int dept_no;
     
     
 }

@@ -13,4 +13,8 @@ public class EmpService {
 		return dao.emp();
 	}
 	
+	public int insert(Employee e) {
+		return dao.insert(e);
+	}
+	
 }

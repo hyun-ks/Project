@@ -12,5 +12,8 @@ public interface EmployeeDAO {
     // 가정상의 데이터베이스나 외부 소스에서 사원 목록을 가져오는 메서드
     @Select("select * from em_info")
     List<Employee> emp();
-    //@Insert("INSERT INTO em_info(userid")
+    
+    @Insert("INSERT INTO em_info(userid, em_name, em_birth,em_hiredate,em_gender,em_phone,em_address,em_email,em_photo,em_salaly,auth_set,vac_no,dept_no) "
+    		+ "values(#{userid}, #{em_name}, #{em_birth},#{em_hiredate},#{em_gender},#{em_phone},#{em_address},#{em_email},#{em_photo},#{em_salaly},#{auth_set},#{vac_no},#{dept_no})")
+    int insert(Employee e);
 }

@@ -109,7 +109,7 @@
        		<td> ${e.em_phone}</td>
        		<td> ${e.em_address}</td>
        		<td> ${e.em_email}</td>
-       		<th> ${e.em_photo}</th> 
+       		<th> <img src="/upload/${e.em_photo}" alt="사진없음"></th> 
        		<td> ${e.em_salaly}</td>
        		<td> ${e.auth_set}</td>
        		<td> ${e.vac_no}</td>

@@ -1,7 +1,5 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.hrm.dept.DepartmentDAO" %>
-<%@ page import="com.hrm.dept.Department" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Department List</title>
@@ -84,24 +82,18 @@
     </nav>
     <main>
     <h1>Department List</h1>
-    <%
-        DepartmentDAO departmentDAO = new DepartmentDAO();
-        List<Department> departments = departmentDAO.getAllDepartments();
-    %>
-
+    
     <table border="1">
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Location</th>
         </tr>
-        <% for (Department department : departments) { %>
-            <tr>
-                <td><%= department.getId() %></td>
-                <td><%= department.getName() %></td>
-                <td><%= department.getLocation() %></td>
-            </tr>
-        <% } %>
+       <c:forEach items="${de}" var="d">
+       	<tr>
+       		<td> ${d.dept_no}</td>
+       		<td> ${d.dept_name}</td>
+       	</tr>
+       	</c:forEach>
     </table>
     </main>
 </body>

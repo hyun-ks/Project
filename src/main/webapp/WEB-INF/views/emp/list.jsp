@@ -1,7 +1,5 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.hrm.emp.EmployeeDAO" %>
-<%@ page import="com.hrm.emp.Employee" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Employee List</title>
@@ -84,24 +82,40 @@
     </nav>
     <main>
     <h1>Employee List</h1>
-    <%
-        EmployeeDAO employeeDAO = new EmployeeDAO();
-        List<Employee> employees = employeeDAO.getAllEmployees();
-    %>
 
     <table border="1">
         <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Department</th>
+            <th>userid</th>
+            <th>em_name</th>
+            <th>em_birth</th>
+            <th>em_hiredate</th>
+            <th>em_gender</th>
+            <th>em_phone</th>
+            <th>em_address</th>
+            <th>em_email</th>
+            <th>em_photo</th>   
+            <th>em_salaly</th>   
+            <th>auth_set</th>
+            <th>vac_no</th>
         </tr>
-        <% for (Employee employee : employees) { %>
-            <tr>
-                <td><%= employee.getId() %></td>
-                <td><%= employee.getName() %></td>
-                <td><%= employee.getDepartment() %></td>
-            </tr>
-        <% } %>
+        
+         <c:forEach items="${emp}" var="e">
+         <tr>
+         	<td> ${e.userid}</td>
+       		<td> ${e.em_name}</td>
+       		<td> ${e.em_birth}</td>
+       		<td> ${e.em_hiredate}</td>
+       		<td> ${e.em_gender}</td>
+       		<td> ${e.em_phone}</td>
+       		<td> ${e.em_address}</td>
+       		<td> ${e.em_email}</td>
+       		<th> ${e.em_photo}</th> 
+       		<td> ${e.em_salaly}</td>
+       		<td> ${e.auth_set}</td>
+       		<td> ${e.vac_no}</td>
+       	 </tr>
+         </c:forEach>
+       
     </table>
     </main>
 </body>

@@ -1,26 +1,27 @@
 package com.hrm.emp;
 
+import java.sql.Blob;
+import java.sql.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Employee {
-    private int id;
-    private String name;
-    private String department;
-
-    // 생성자, Getter 및 Setter 메서드는 생략합니다.
-
-    public Employee(int i, String string, String string2) {
-		// TODO Auto-generated constructor stub
-	}
-
-	// 예를 들어 Getter 메서드는 다음과 같이 구현될 수 있습니다.
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
+    private int userid;
+    private String em_name;
+    private Date em_birth;
+    private Date em_hiredate;
+    private String em_gender;
+    private String em_phone;
+    private String em_address;
+    private String em_email;
+    private String em_photo;
+    private int em_salaly;
+    private int auth_set;
+    private int vac_no;
+    
+    
 }

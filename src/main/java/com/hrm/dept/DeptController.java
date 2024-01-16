@@ -16,5 +16,4 @@ public class DeptController {
 		m.addAttribute("de", d.deptall());
         return "/dept/list";
     }
-
 }

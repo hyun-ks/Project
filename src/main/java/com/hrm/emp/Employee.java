@@ -1,5 +1,7 @@
 package com.hrm.emp;
 
+
+
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -22,6 +24,6 @@ public class Employee {
     private int auth_set;
     private int vac_no;
     private int dept_no;
-    
-    
+    private String dept_name;
+    private String Password;
 }

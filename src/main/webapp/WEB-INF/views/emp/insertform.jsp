@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +9,8 @@
 <form action="insert" method="post" enctype="multipart/form-data">
 userid <input name="userid"> <br>
 em_name <input name="em_name"> <br>
-em_birth <input name="em_birth"> <br>
-em_hiredate <input name="em_hiredate"> <br>
+em_birth <input name="em_birth" placeholder=" yyyy/MM/dd"> <br>
+em_hiredate <input name="em_hiredate" placeholder=" yyyy/MM/dd"> <br>
 em_gender <input type="radio" name="em_gender" value="남">남 
 <input type="radio" name="em_gender" value="여">여 
 <br>
@@ -21,7 +22,13 @@ em_photo <input name="photo" type="file">
 em_salaly <input name="em_salaly"> <br>
 auth_set <input name="auth_set"> <br>
 vac_no <input name="vac_no"> <br>
-dept_no <input name="dept_no"> <br>
+Password<input name="Password" type="password"><br>
+
+ 		<select name="dept_no">
+		<c:forEach items="${dept}" var="d">
+		<option value="${d.dept_no}">${d.dept_name}</option>
+		</c:forEach>
+		</select>		
 <input type="submit" value="추가">
 </form>
 </body>

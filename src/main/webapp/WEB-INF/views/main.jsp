@@ -114,8 +114,9 @@ main {
 </style>
 </head>
 <body>
-	<header>
-		<div class="user-info">
+
+    <header>
+        <div class="user-info">
             <span>[${user.dept_name}]</span> 
             <span>[${user.em_name}님 접속하셨습니다]</span>
         </div>

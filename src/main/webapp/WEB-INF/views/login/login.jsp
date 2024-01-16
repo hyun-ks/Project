@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,12 +62,13 @@ header {
 	<div class="container">
 		<div class="login-form">
 			<h2>Login</h2>
-			<form action="loginProcess" method="post">
-				Username: <input type="text" name="username"><br>
-				Password: <input type="password" name="password"><br> <input
-					type="submit" value="Login"><br>
+			<form:form action="/login/loginProcess" method="get" modelAttribute="login">
+				<form:errors element="div"/>
+				<label for="userid">id : </label><input name="userid" id="userid"><form:errors path="userid" delimiter=" "/> <br>
+				<label for="Password">pw : </label><input name="Password" id="Password" type="Password"><form:errors path="Password" delimiter=" "/><br>
+				<input type="submit" value="로그인">
 					
-			</form>
+			</form:form>
 		</div>
 	</div>
 </body>

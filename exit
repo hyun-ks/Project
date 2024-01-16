@@ -1,0 +1,122 @@
+[33mcommit 3bb3de84ffb99e12a32e4efb83084990aa8be0eb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Tue Jan 16 22:56:26 2024 +0900
+
+    메인 사원부서목록 수정
+
+[33mcommit 206a4598262ced364d5ad97ff4d0fec92b83c942[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Mon Jan 15 18:23:19 2024 +0900
+
+    views01
+
+[33mcommit f8ad70aa8850c516c3e5b20f451699a0ab10b4eb[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Mon Jan 15 18:19:06 2024 +0900
+
+    index.html01
+
+[33mcommit 92b787cf972cd74fe02fa3f4067b3b33f6bc43a4[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Mon Jan 15 17:52:19 2024 +0900
+
+    main.jsp01
+
+[33mcommit 10bb878274bee595b2cbebc9ea96096be43c392b[m
+Author: soldesk <soldesk@DESKTOP-APL0QLP>
+Date:   Mon Jan 15 16:09:32 2024 +0900
+
+    image upload
+
+[33mcommit 2ab18423f7f32ea729674d24258115fa7d8fe139[m
+Author: soldesk <soldesk@DESKTOP-APL0QLP>
+Date:   Mon Jan 15 14:46:48 2024 +0900
+
+    emp insert
+
+[33mcommit c0ddaa522d26f984409deb3b407f2c9724f24bb8[m
+Author: soldesk <soldesk@DESKTOP-APL0QLP>
+Date:   Mon Jan 15 14:27:39 2024 +0900
+
+    project3
+
+[33mcommit 25b237c67e57efd5cd441f9a53f1fa455e95e53b[m
+Merge: 7a15359 951fbd3
+Author: jinsdf <111256430+jinsdf@users.noreply.github.com>
+Date:   Wed Jan 10 11:23:02 2024 +0900
+
+    Merge pull request #4 from hyun-ks/practice01
+    
+    practice01
+
+[33mcommit 7a15359b543e6c81449a925f5e874fe241207d98[m
+Merge: 5e14f30 7dbb8cc
+Author: jinsdf <111256430+jinsdf@users.noreply.github.com>
+Date:   Tue Jan 9 17:45:04 2024 +0900
+
+    Merge pull request #3 from hyun-ks/My_Project
+    
+    test02
+
+[33mcommit 7dbb8cc3db036645a58c5e87004aada09e3e68b3[m
+Author: lee <azjin12@gmail.com>
+Date:   Tue Jan 9 17:43:45 2024 +0900
+
+    test02
+
+[33mcommit 5e14f301151cd28b7705151a6052f955830827b7[m
+Merge: d2b97c4 6966e1b
+Author: jinsdf <111256430+jinsdf@users.noreply.github.com>
+Date:   Tue Jan 9 17:07:10 2024 +0900
+
+    Merge pull request #2 from hyun-ks/ljh0505
+    
+    test1
+
+[33mcommit 6966e1b935470683c1f74d3176c50fb34060f92b[m
+Author: lee <azjin12@gmail.com>
+Date:   Tue Jan 9 16:34:07 2024 +0900
+
+    test1
+
+[33mcommit 951fbd30769124f8c76d499ee977d90792650771[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Mon Jan 8 16:13:45 2024 +0900
+
+    practice01
+
+[33mcommit d2b97c4ebf503e2075b4dece285b0c47030676d0[m
+Author: seungsugit <cjstkdidksl190@gmail.com>
+Date:   Wed Jan 3 01:44:12 2024 +0900
+
+    test01
+
+[33mcommit ebcfa7d55f00f81ad58dcd70adfe2c8d6b5336a4[m
+Author: Hyerimyou <yyu2010@naver.com>
+Date:   Tue Jan 2 18:36:37 2024 +0900
+
+    ok
+
+[33mcommit 5ef5f4b720fe76de5f4c36430e2bfc4a64382785[m
+Author: lee <azjin12@gmail.com>
+Date:   Tue Jan 2 16:56:15 2024 +0900
+
+    test0505
+
+[33mcommit 0b32d2de09851e7da8bf1c00575a1656a594a3b1[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Tue Jan 2 16:14:21 2024 +0900
+
+    test01
+
+[33mcommit 1442c894503e1434dd68f3b440f1f873f2e3cfbf[m
+Author: kaiwe97 <kaiwe97@naver.com>
+Date:   Tue Jan 2 16:10:30 2024 +0900
+
+    test01
+
+[33mcommit c23d548206b75145921b5e8b07d3ee273f0b828c[m
+Author: su <lsy15968@naver.com>
+Date:   Tue Jan 2 15:06:42 2024 +0900
+
+    ex commit

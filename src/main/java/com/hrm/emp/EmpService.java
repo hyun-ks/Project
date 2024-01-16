@@ -17,4 +17,8 @@ public class EmpService {
 		return dao.insert(e);
 	}
 	
+	public Employee empOne(int userid) {
+		return dao.empOne(userid);
+	}
+	
 }

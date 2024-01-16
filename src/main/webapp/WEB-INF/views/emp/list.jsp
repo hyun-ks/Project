@@ -64,10 +64,12 @@ main {
     </style>
 </head>
 <body>
+
 	<header>
 		<div class="user-info">
-			<span>사용자명: [사용자명]</span> <span>부서: [부서명]</span>
-		</div>
+            <span>[${user.dept_name}]</span> 
+            <span>[${user.em_name}님 접속하셨습니다]</span>
+        </div>
 		<div class="attendance-buttons">
 			<a href="/attendance/check"><button>출퇴근</button></a>
 		</div>
@@ -91,20 +93,24 @@ main {
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>
+
+    
+
     <main>
     <h1>Employee List</h1>
 
     <table border="1">
         <tr>
+        	<th>em_photo</th> 
             <th>userid</th>
+            <th>dept_name</th> 
             <th>em_name</th>
             <th>em_birth</th>
             <th>em_hiredate</th>
             <th>em_gender</th>
             <th>em_phone</th>
             <th>em_address</th>
-            <th>em_email</th>
-            <th>em_photo</th>   
+            <th>em_email</th>  
             <th>em_salaly</th>   
             <th>auth_set</th>
             <th>vac_no</th>
@@ -112,7 +118,9 @@ main {
         
          <c:forEach items="${emp}" var="e">
          <tr>
+         	<th> <img src="/upload/${e.em_photo}" alt="사진없음" width="200"></th>
          	<td> ${e.userid}</td>
+         	<td> ${e.dept_name}</td>
        		<td> ${e.em_name}</td>
        		<td> ${e.em_birth}</td>
        		<td> ${e.em_hiredate}</td>
@@ -120,7 +128,6 @@ main {
        		<td> ${e.em_phone}</td>
        		<td> ${e.em_address}</td>
        		<td> ${e.em_email}</td>
-       		<th> <img src="/upload/${e.em_photo}" alt="사진없음"></th> 
        		<td> ${e.em_salaly}</td>
        		<td> ${e.auth_set}</td>
        		<td> ${e.vac_no}</td>

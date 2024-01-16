@@ -116,8 +116,9 @@ main {
 <body>
 	<header>
 		<div class="user-info">
-			<span>사용자명: [사용자명]</span> <span>부서: [부서명]</span>
-		</div>
+            <span>[${user.dept_name}]</span> 
+            <span>[${user.em_name}님 접속하셨습니다]</span>
+        </div>
 		<div class="attendance-buttons">
 			<a href="/attendance/check"><button>출퇴근</button></a>
 		</div>
@@ -177,5 +178,6 @@ main {
 			</tr>
 		</table>
 	</main>
+
 </body>
 </html>

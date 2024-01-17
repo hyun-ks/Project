@@ -71,8 +71,8 @@
             
         </div>
         <div class="attendance-buttons">
-            <a href="/attendance/check"><button>출근</button></a>
-            <a href="/attendance/check"><button>퇴근</button></a>
+            <a href="/attendance/check?commit=출근"><button>출근</button></a>
+            <a href="/attendance/check?commit=퇴근"><button>퇴근</button></a>
         </div>
         <!-- 다른 메뉴 항목 -->
     </header>

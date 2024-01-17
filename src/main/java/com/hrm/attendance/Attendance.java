@@ -7,8 +7,7 @@ import lombok.Data;
 @Data
 public class Attendance {
 	
-	 private LocalDateTime checkInTime;
-	 private LocalDateTime checkOutTime;
+	 private LocalDateTime checktime;
 	 private int userid;
 	 private String commit;
 }

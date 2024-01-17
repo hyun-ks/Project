@@ -84,25 +84,28 @@
     </nav>
     <main>
 
-<h1>마이페이지 - 내 정보</h1>
+<h1>마이페이지</h1>
+
+<h2> 내정보 </h2>
+<strong>사원번호:</strong>${user.userid}<br>
+<strong>이름:</strong>${user.em_name}<br>
+<strong>생년월일:</strong>${user.em_birth}<br>
+<strong>입사일:</strong>${user.em_hiredate}<br>
+<strong>부서명:</strong>${user.dept_name}<br>
+<strong>연봉:</strong>${user.em_salaly}<br>
+<strong>전화번호:</strong>${user.em_phone}<br>
+<strong>주소:</strong>${user.em_address}<br>
+<strong>e-mail:</strong>${user.em_email}<br>
 
 <%
-    // 여기에 사용자 정보를 가져오는 Java 코드를 넣어야 합니다.
-    // 예를 들어, 사용자 정보를 가져오는 함수가 있다고 가정하겠습니다.
     String username = "사용자명"; // 사용자명을 가져오는 함수 호출 (가정)
     String email = "이메일@example.com"; // 이메일을 가져오는 함수 호출 (가정)
 %>
 
 <div>
-    <h2>내 정보</h2>
-    <form action="updateUserInfo" method="post">
-        <label for="username">사용자명:</label>
-        <input type="text" id="username" name="username" value="<%= username %>"><br><br>
-
-        <label for="email">이메일:</label>
-        <input type="email" id="email" name="email" value="<%= email %>"><br><br>
-
-        <input type="submit" value="정보 수정">
+  
+        <button type="button" onclick="location.href=('http://localhost:8081/info/edit');"> 정보수정 </button>
+        
     </form>
     <!-- 사용자 정보를 보여주고, 수정할 수 있는 폼을 제공합니다. -->
 </div>

@@ -85,20 +85,52 @@
 
 <h1>마이페이지 - 내 정보 수정</h1>
 
-<%
-    String updatedUsername = request.getParameter("username");
-    String updatedEmail = request.getParameter("email");
 
-    // 이 부분에서는 받아온 정보를 처리하고 데이터베이스에 업데이트하는 코드가 들어가야 합니다.
-    // 여기서는 입력된 정보를 확인하여 출력하는 예시 코드를 작성하겠습니다.
-%>
 
 <div>
-    <h2>수정된 정보 확인</h2>
-    <p><strong>수정된 사용자명:</strong> <%= updatedUsername %></p>
-    <p><strong>수정된 이메일:</strong> <%= updatedEmail %></p>
+    <h2>기본 정보 확인</h2>
+    <strong>사원번호:</strong> ${user.userid}<br>
+    <strong>이름:</strong> ${user.em_name}<br>
+    <strong>생년월일:</strong> ${user.em_birth}<br>
+    <strong>입사일:</strong>${user.em_hiredate}<br>
+    <strong>부서명:</strong>${user.dept_name}<br>
+	<strong>연봉:</strong>${user.em_salaly}<br>
+    
     <!-- 사용자가 수정한 정보를 확인합니다. -->
+    
+     <h2>개인정보 수정</h2>
+        <form action="/info/update-mypage" method="get">
+            <!-- 수정할 내용 입력 폼 -->
+            
+            </div>
+            <!-- 추가 필드들을 여기에 추가 -->
+            <div class="form-group">
+                <label for="phoneNumber">전화번호:</label>
+                <input type="text" id="phoneNumber" name="em_phone">
+            </div>
+            <div class="form-group">
+                <label for="email">e-mail:</label>
+                <input type="email" id="email" name="em_email">
+            </div>
+            <div class="form-group">
+                <label for="address">주소:</label>
+                <input type="text" id="address" name="em_address">
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">비밀번호 확인:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+            </div>
 
+            <!-- 기타 수정할 내용을 여기에 추가 -->
+
+            <!-- 저장 버튼 -->
+            <button type="submit"> 수정 </button>
+        </form>
+    
     <%-- 여기에 데이터베이스 업데이트 로직을 추가해야 합니다. --%>
     <%-- 예시: 데이터베이스에 사용자 정보 업데이트 --%>
     <%-- updateUserInfo(updatedUsername, updatedEmail); --%>

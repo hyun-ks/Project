@@ -28,24 +28,28 @@ header {
 }
 
 .login-form {
-	width: 30%;
+	width: 300px;
 	margin: 5% auto;
+	margin-top: 30px;
 	background: #fff;
 	padding: 20px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-form input[type="text"], .login-form input[type="password"],
-	.login-form input[type="submit"] {
-	width: 100%;
+.login-form input[type="text"], .login-form input[type="password"] {
+	width: 278px;
 	padding: 10px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 }
 
 .login-form input[type="submit"] {
+	width: 300px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 5px;
 	background: #333;
 	color: #fff;
 	border: none;

@@ -67,6 +67,8 @@
         <div class="user-info">
             <span>[${user.dept_name}]</span> 
             <span>[${user.em_name}님 접속하셨습니다]</span>
+            <a href="login"><button>로그아웃</button></a>
+            
         </div>
         <div class="attendance-buttons">
             <a href="/attendance/check"><button>출근</button></a>

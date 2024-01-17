@@ -64,8 +64,8 @@ header {
 			<h2>Login</h2>
 			<form:form action="/login/loginProcess" method="get" modelAttribute="login">
 				<form:errors element="div"/>
-				<label for="userid">id : </label><input name="userid" id="userid"><form:errors path="userid" delimiter=" "/> <br>
-				<label for="Password">pw : </label><input name="Password" id="Password" type="Password"><form:errors path="Password" delimiter=" "/><br>
+				<label for="userid">ID : </label><input name="userid" id="userid" type="text"><form:errors path="userid" delimiter=" "/> <br>
+				<label for="Password">Password : </label><input name="Password" id="Password" type="Password"><form:errors path="Password" delimiter=" "/><br>
 				<input type="submit" value="로그인">
 					
 			</form:form>

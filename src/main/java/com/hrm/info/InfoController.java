@@ -44,6 +44,7 @@ public class InfoController {
     	
      return "redirect:/info/profile";
  }
+    
+    
 }
-
 	

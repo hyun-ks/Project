@@ -74,7 +74,7 @@ text-align: center;
 		<div class="user-info">
           			<span>[${user.dept_name}]</span> 
            			<span>[${user.em_name}님 접속하셨습니다]</span>
-           			<a href="login"><button>로그아웃</button></a>
+           			<a href="/login/logout"><button>로그아웃</button></a>
 	</div>
         <div class="attendance-buttons">
             <a href="/attendance/check?commit=출근"><button>출근</button></a>

@@ -61,10 +61,10 @@ public class LoginController {
 		
     }
     
-    @GetMapping("/logout")
+    @GetMapping("/login/logout")
 	public String logout(SessionStatus status) {
 		status.setComplete();//세션삭제
-		return "redirect:/";
+		return "redirect:/login/login";
 		
 	}
       	

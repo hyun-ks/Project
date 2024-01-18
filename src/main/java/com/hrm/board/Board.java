@@ -16,8 +16,6 @@ public class Board {
     private String content;
     private Date regdate;
     private int readcount;
-    private String keyword;
-	private String type;
     // ... 다른 필드와 메서드들
     // Getter와 Setter 메서드들
 }

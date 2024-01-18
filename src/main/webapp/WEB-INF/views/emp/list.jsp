@@ -75,6 +75,7 @@
             <li><a href="/emp/list">사원 목록</a><br></li>
             <li><a href="/dept/list">부서 목록</a><br></li>
             <li><a href="/approval/list">전자 결재 시스템</a><br></li>
+            <li><a href="/emp/insert">사원추가</a><br></li>
             <li><a href="/info/profile">마이페이지</a><br></li>
             
             <!-- ... -->
@@ -102,7 +103,7 @@
         
          <c:forEach items="${emp}" var="e">
          <tr>
-         	<th> <img src="/upload/${e.em_photo}" alt="사진없음" width="200"></th>
+         	<th> <img src="/upload/${e.em_photo}" alt="사진없음" width="150"></th>
          	<td> ${e.userid}</td>
          	<td> ${e.dept_name}</td>
        		<td> ${e.em_name}</td>

@@ -17,5 +17,9 @@ public class InfoController {
 	public String showInfoupdateUserInfoForm() {
 		return "/info/updateUserInfo";
 	}
+	@RequestMapping("/info/add")
+    public String showInfoaddform() {
+        return "/info/add";
+    }
 
 }

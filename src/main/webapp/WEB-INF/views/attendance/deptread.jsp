@@ -63,6 +63,45 @@ main {
 	margin-left: 150px;
 	padding: 10px;
 }
+.search {
+	width: 300px;
+	margin: auto;
+	margin-top: 30px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.search input[type="text"], .search input[type="date"] {
+	width: 250px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.search input[type="submit"] {
+	width: 100px;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	background: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+.check {
+	width: 600px;
+	margin: auto;
+	margin-top: 10px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.check li {
+	margin: 3px;
+}
     </style>
 </head>
 <body>
@@ -84,12 +123,13 @@ main {
 			<li><a href="/emp/list">사원 목록</a><br></li>
 			<li><a href="/dept/list">부서 목록</a><br></li>
 			<li><a href="/approval/list">전자 결재 시스템</a><br></li>
+			<li><a href="/emp/insertform">사원 추가</a><br></li>
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>
     <main>
     <h2>근태 확인</h2>
-    <form action="/attendance/deptread" method="post">
+    <form action="/attendance/deptread" method="post" class="search">
         <label for="employeeId">직원 ID:</label>
         <input type="text" id="employeeId" name="employeeId"><br><br>
         
@@ -101,12 +141,13 @@ main {
         <input type="date" id="endDate" name="endDate"><br><br>
         
         <input type="submit" value="근태 조회">
-        
-        <div>
+        </form>
+        <div class="check">
+        <h3>조회 내역</h3>
         	 <c:forEach items="${view}" var="v">
-			<td>사원번호[${v.userid}] ${v.checktime} ${v.commit}</td><br>
+			<li>사원번호[${v.userid}] ${v.checktime} ${v.commit}</li>
 			</c:forEach>
         </div>
-    </form></main>
+    </main>
 </body>
 </html>

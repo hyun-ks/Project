@@ -6,7 +6,7 @@
     String dateTime = request.getParameter("dateTime");
 
     // 데이터베이스 연결 설정 (아래의 정보는 예시이며, 실제 정보로 교체해야 함)
-    String url = "jdbc:mysql://localhost:3306/your_database_name";
+    String url = "jdbc:mysql://localhost:3306/hrm";
     String username = "your_username";
     String password = "your_password";
 

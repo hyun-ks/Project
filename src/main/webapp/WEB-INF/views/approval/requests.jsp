@@ -66,27 +66,21 @@ main {
 <body>
 	<header>
 		<div class="user-info">
-			<span>사용자명: [사용자명]</span> <span>부서: [부서명]</span>
-		</div>
-		<div class="attendance-buttons">
-			<a href="/attendance/check"><button>출퇴근</button></a>
-		</div>
+          			<span>[${user.dept_name}]</span> 
+           			<span>[${user.em_name}님 접속하셨습니다]</span>
+           			<a href="login"><button>로그아웃</button></a>
+	</div>
+        <div class="attendance-buttons">
+            <a href="/attendance/check?commit=출근"><button>출근</button></a>
+            <a href="/attendance/check?commit=퇴근"><button>퇴근</button></a>
+        </div>
 	</header>
-	<nav class="nav">
+	<nav>
 		<ul>
-			<li><a href="/emp/list">직원 정보</a><br>
-				<ul>
-					<li><a href="/emp/list">사원 목록</a><br></li>
-					<li><a href="/dept/list">부서 목록</a><br></li>
-				</ul></li>
-			<li><a href="/board/list">게시판</a><br>
-				<ul>
-					<li><a href="/board/notice">공지사항</a><br></li>
-					<li><a href="/board/plan">교육계획</a><br></li>
-					<li><a href="/board/library">자료실</a><br></li>
-					<li><a href="/board/evaluation">사원 평가</a><br></li>
-				</ul></li>
-			<li><a href="/attendance/read">근태 확인</a><br></li>
+			<li><a href="/board/list">게시판</a><br></li>
+     			<li><a href="/attendance/deptread">근태 확인</a><br></li>
+			<li><a href="/emp/list">사원 목록</a><br></li>
+			<li><a href="/dept/list">부서 목록</a><br></li>
 			<li><a href="/approval/list">전자 결재 시스템</a><br></li>
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>

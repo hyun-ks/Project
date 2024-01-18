@@ -67,16 +67,5 @@ public class LoginController {
 		return "redirect:/";
 		
 	}
-    
-    @ModelAttribute("user")
-    @GetMapping("/loginCheck")
-    public String check(@ModelAttribute("user") Login dto) {
-		if(dto.getUserid() != null) {
-			return "login/loginCheck";
-		}else {
-			return "redirect:/login/login"; 
-		}
-	}
-    
-    	
+      	
 }

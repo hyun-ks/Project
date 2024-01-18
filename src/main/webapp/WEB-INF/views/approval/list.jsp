@@ -66,58 +66,24 @@ main {
 <body>
 	<header>
 		<div class="user-info">
-			<span>사용자명: [사용자명]</span> <span>부서: [부서명]</span>
-		</div>
-		<div class="attendance-buttons">
-			<a href="/attendance/check"><button>출퇴근</button></a>
-		</div>
+          			<span>[${user.dept_name}]</span> 
+           			<span>[${user.em_name}님 접속하셨습니다]</span>
+           			<a href="login"><button>로그아웃</button></a>
+	</div>
+        <div class="attendance-buttons">
+            <a href="/attendance/check?commit=출근"><button>출근</button></a>
+            <a href="/attendance/check?commit=퇴근"><button>퇴근</button></a>
+        </div>
 	</header>
-	<nav class="nav">
+	<nav>
 		<ul>
-			<li><a href="/emp/list">직원 정보</a><br>
-				<ul>
-					<li><a href="/emp/list">사원 목록</a><br></li>
-					<li><a href="/dept/list">부서 목록</a><br></li>
-				</ul></li>
-			<li><a href="/board/list">게시판</a><br>
-				<ul>
-					<li><a href="/board/notice">공지사항</a><br></li>
-					<li><a href="/board/plan">교육계획</a><br></li>
-					<li><a href="/board/library">자료실</a><br></li>
-					<li><a href="/board/evaluation">사원 평가</a><br></li>
-				</ul></li>
-			<li><a href="/attendance/read">근태 확인</a><br></li>
+			<li><a href="/board/list">게시판</a><br></li>
+     			<li><a href="/attendance/deptread">근태 확인</a><br></li>
+			<li><a href="/emp/list">사원 목록</a><br></li>
+			<li><a href="/dept/list">부서 목록</a><br></li>
 			<li><a href="/approval/list">전자 결재 시스템</a><br></li>
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>
-    <main>
-    <h1>전자 결재 목록</h1>
-    
-    <%
-        // 여기서 데이터베이스 연결 및 쿼리를 수행하여 결재 목록을 가져옵니다.
-        // 예를 들어, Java의 JDBC를 사용하여 데이터베이스에 연결하고 쿼리를 실행할 수 있습니다.
-        // 가져온 데이터를 반복문을 통해 테이블 혹은 목록으로 표시합니다.
-        try {
-            // 데이터베이스 연결 코드 작성
-            
-            // 쿼리를 통해 결재 목록을 가져옵니다.
-            // ResultSet으로 결과를 받아온 후 반복문을 통해 목록을 표시합니다.
-            // 예를 들어,
-            // ResultSet rs = statement.executeQuery("SELECT * FROM 결재목록");
-            // while (rs.next()) {
-            //     // 여기서 결재 목록을 표시하는 코드 작성
-            // }
-            
-            // 데이터베이스 연결 해제
-        } catch (Exception e) {
-            e.printStackTrace();
-            // 에러 처리 로직 추가
-        }
-    %>
-    
-    <!-- 여기에 결재 목록을 표시할 HTML 코드 작성 -->
-    <!-- 예를 들어, 테이블 형태로 결재 목록을 표시 -->
-    </main>
 </body>
 </html>

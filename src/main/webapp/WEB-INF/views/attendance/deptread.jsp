@@ -119,11 +119,11 @@ main {
 	<nav>
 		<ul>
 			<li><a href="/board/list">게시판</a><br></li>
-     			<li><a href="/attendance/deptread">근태 확인</a><br></li>
+     		<li><a href="/attendance/deptread">근태 확인</a><br></li>
 			<li><a href="/emp/list">사원 목록</a><br></li>
 			<li><a href="/dept/list">부서 목록</a><br></li>
 			<li><a href="/approval/list">전자 결재 시스템</a><br></li>
-			<li><a href="/emp/insertform">사원 추가</a><br></li>
+			<li><a href="/emp/insert">사원추가</a><br></li>
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>
@@ -143,7 +143,7 @@ main {
         <input type="submit" value="근태 조회">
         </form>
         <div class="check">
-        <h3>조회 내역</h3>
+        <h3>근무 내역</h3>
         	 <c:forEach items="${view}" var="v">
 			<li>사원번호[${v.userid}] ${v.checktime} ${v.commit}</li>
 			</c:forEach>

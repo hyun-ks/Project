@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,6 +64,9 @@ main {
 	margin-left: 150px;
 	padding: 10px;
 }
+.main{
+text-align: center;
+}
     </style>
 </head>
 <body>
@@ -86,14 +91,23 @@ main {
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>
-    <form action="saveAttendance.jsp" method="post">
-        <label for="employeeId">직원 ID:</label>
-        <input type="text" id="employeeId" name="employeeId"><br><br>
-        
-        <label for="dateTime">날짜 및 시간:</label>
-        <input type="datetime-local" id="dateTime" name="dateTime"><br><br>
-        
-        <input type="submit" value="출퇴근 등록">
-    </form>
+    <main class="main">
+
+<c:if test="${popupMessage == null}">
+
+	<h2>${commit} 처리 되었습니다.</h2>
+         <span>[${user.userid}]</span>
+         <span>${user.em_name}</span><br>
+         <span> 현재시간 : <fmt:formatDate value="${time}" pattern="yyyy/MM/dd HH:mm"/> </span><br>
+
+</c:if>
+</main>
+<c:if test="${popupMessage != null}">
+
+<script> alert("${popupMessage}"); 
+		history.go(-1);
+</script>
+
+</c:if>         
 </body>
 </html>

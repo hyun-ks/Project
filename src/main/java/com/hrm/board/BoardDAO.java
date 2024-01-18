@@ -12,4 +12,4 @@ public class BoardDAO {
 		// 이후 가져온 목록을 리턴
 		return boards;
 	}
-}
+}    

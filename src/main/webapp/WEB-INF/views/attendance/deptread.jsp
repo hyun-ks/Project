@@ -130,8 +130,14 @@ main {
     <main>
     <h2>근태 확인</h2>
     <form action="/attendance/deptread" method="post" class="search">
-        <label for="employeeId">직원 ID:</label>
-        <input type="text" id="employeeId" name="employeeId"><br><br>
+    
+    
+        <span>직원 ID:</span>
+        <select name="userid">
+    	<c:forEach items="${name}" var="n">
+		<option value="${n.userid}">${n.em_name}</option>
+		</c:forEach>
+		</select><br><br>
         
         <label for="startDate">시작 날짜:</label>
         <input type="date" id="startDate" name="startDate"><br><br>

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.el.parser.AstConcatenation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,5 +29,9 @@ public class AttendanceService {
 	
 	public List<Attendance> viewall(){
 		return dao.viewall();
+	}
+	
+	public List<Attendance> name(int dept_no){
+		return dao.name(dept_no);
 	}
 }

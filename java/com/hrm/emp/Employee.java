@@ -26,4 +26,5 @@ public class Employee {
     private int dept_no;
     private String dept_name;
     private String Password;
+    private int ranknum;
 }

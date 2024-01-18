@@ -22,4 +22,7 @@ public interface AttendanceDAO {
 	 
 	 @Select("select * from em_att")
 	 List<Attendance> viewall();
+	 
+	 @Select("select em_name, userid from em_info where dept_no = #{dept_no}")
+	 List<Attendance> name(@Param("dept_no") int dept_no);
 }

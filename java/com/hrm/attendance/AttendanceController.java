@@ -38,13 +38,21 @@ public class AttendanceController {
 		return "/attendance/check";
 	}
 	
+	@GetMapping("/attendance/authcheck")
+	public String showAttendanceauthcheckForm() {
+		return "/attendance/authcheck";
+	}
+	
 	@GetMapping("/attendance/deptread")
-    public String showAttendanceDeptreadForm(Model m) {
+    public String showAttendanceDeptreadForm(Model m, @ModelAttribute("user") Employee user) {
+		if(user.getRanknum() > 3) {
+			return "/attendance/authcheck";
+		}
 		m.addAttribute("view", a.viewall());
+		m.addAttribute("name",a.name(user.getDept_no()));
 	
         return "/attendance/deptread";
     }
-	
 	
 	@ModelAttribute("user")
 	public Employee getLoginDto() {
@@ -52,7 +60,7 @@ public class AttendanceController {
 	}
 	
 	@PostMapping("attendance/deptread")
-	public String searchAttendance(@DateTimeFormat(pattern = "yyyy-MM-dd")@RequestParam("startDate") Date startDate, @DateTimeFormat(pattern = "yyyy-MM-dd")@RequestParam("endDate") Date endDate, Model m, @RequestParam(value="employeeId", defaultValue = "101") int userid) {
+	public String searchAttendance(@DateTimeFormat(pattern = "yyyy-MM-dd")@RequestParam("startDate") Date startDate, @DateTimeFormat(pattern = "yyyy-MM-dd")@RequestParam("endDate") Date endDate, Model m, @RequestParam(value="userid", defaultValue = "0") int userid) {
 		List<Attendance> slist = a.search(userid, startDate, endDate);
 		m.addAttribute("startDate", startDate);
 		m.addAttribute("endDate", endDate);

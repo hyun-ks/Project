@@ -12,6 +12,8 @@ public class Attendance {
 	 private LocalDateTime checktime;
 	 private int userid;
 	 private String commit;
+	 private int ranknum;
+	 private String em_name;
 	 
 	
 }

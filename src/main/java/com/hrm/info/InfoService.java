@@ -22,5 +22,5 @@ public class InfoService {
  public int empupdata(Employee emp) {
 	 return infoDAO.empupdate(emp);
  }
-
+    
 }

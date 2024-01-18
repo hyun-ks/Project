@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,8 +58,8 @@
 <body>
     <header>
         <div class="user-info">
-            <span>사용자명: [사용자명]</span> <!-- 사용자 이름 -->
-            <span>부서: [부서명]</span> <!-- 부서명 -->
+            <span>[${user.dept_name}]</span>
+            <span>[${user.em_name}님 접속하셨습니다]</span>
         </div>
         <div class="attendance-buttons">
             <a href="/attendance/check"><button>출근</button></a>
@@ -83,17 +84,24 @@
     </nav>
     <main>
     <h2>근태 확인</h2>
-    <form action="checkAttendance.jsp" method="post">
+    <form action="/attendance/deptread" method="post">
         <label for="employeeId">직원 ID:</label>
         <input type="text" id="employeeId" name="employeeId"><br><br>
         
         <label for="startDate">시작 날짜:</label>
         <input type="date" id="startDate" name="startDate"><br><br>
         
+        
         <label for="endDate">종료 날짜:</label>
         <input type="date" id="endDate" name="endDate"><br><br>
         
         <input type="submit" value="근태 조회">
+        
+        <div>
+        	 <c:forEach items="${view}" var="v">
+			<td>사원번호[${v.userid}] ${v.checktime} ${v.commit}</td><br>
+			</c:forEach>
+        </div>
     </form></main>
 </body>
 </html>

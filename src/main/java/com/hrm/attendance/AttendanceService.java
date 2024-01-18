@@ -1,6 +1,7 @@
 package com.hrm.attendance;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +22,11 @@ public class AttendanceService {
 		return dao.find(userid, commit);
 	}
 
+	public List<Attendance> search(int userid, Date startDate, Date endDate) {
+		return dao.search(userid, startDate, endDate);
+	}
+	
+	public List<Attendance> viewall(){
+		return dao.viewall();
+	}
 }

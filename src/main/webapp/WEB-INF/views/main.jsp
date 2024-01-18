@@ -132,6 +132,7 @@ main {
 			<li><a href="/emp/list">사원 목록</a><br></li>
 			<li><a href="/dept/list">부서 목록</a><br></li>
 			<li><a href="/approval/list">전자 결재 시스템</a><br></li>
+			<li><a href="/emp/insertform">사원 추가</a><br></li>
 			<li><a href="/info/profile">마이페이지</a><br></li>
 		</ul>
 	</nav>

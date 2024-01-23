@@ -1,0 +1,70 @@
+package com.hrm.login;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+@SessionAttributes("user")
+public class LoginController {
+	@Autowired
+	LoginService service;
+	
+	@ModelAttribute("user")
+	public Login getLoginDto() {
+		return new Login(); //반환값 세션에 저장(이값을 가져와야함)
+	}
+
+    // 로그인 폼을 보여주는 메서드
+    @RequestMapping("/login/login")
+    public String showLoginForm() {
+        return "/login/login"; // login.jsp와 같은 뷰를 반환
+    }
+    
+    
+ // 로그인 처리를 하는 메서드
+    @RequestMapping("login/loginProcess")//login 클래스의 dto변수로 객체생성
+    public String loginprocess(@ModelAttribute Login dto, BindingResult bindingResult, Model m) {
+        if (bindingResult.hasErrors()) {
+            return "login/login";
+        }
+        
+        String Datapw = service.login(dto.getUsername());
+        
+        if(Datapw == null) {
+        	bindingResult.reject("nocode","아이디 틀림");
+			return "login/login";
+		}else if(Datapw != null && !Datapw.equals(dto.getPassword())) {
+			bindingResult.reject("nocode","비밀번호 틀림");
+			return "login/loginForm";
+		}else if(Datapw.equals(dto.getPassword())) {
+			m.addAttribute("user", dto);
+		}
+		
+		return "login/login";
+        
+        Login loginMember = LoginService.login(form.getUsername(),form.getPassword());
+        if(loginMember == null) {
+        	bindingResult.reject("error", "Invalid username or password. Please try again.");
+        	 return "login/login";
+        }
+        
+        
+      
+        
+        
+       
+        
+    }
+}

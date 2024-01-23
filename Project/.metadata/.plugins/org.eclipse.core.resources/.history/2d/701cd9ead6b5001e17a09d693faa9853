@@ -1,0 +1,15 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<c:forEach items="${sc}" var="sc">
+	<td>사원번호[${v.userid}] ${v.checktime} ${v.commit}</td><br>
+	</c:forEach>
+</div>		
+</body>
+</html>

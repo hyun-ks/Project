@@ -1,0 +1,20 @@
+package com.hrm.login;
+
+import com.hrm.dept.Department;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Login {
+	@NotNull(message = "name is null.")
+	@NotEmpty(message = "name is empty.")
+	private String Username;
+	@NotNull(message = "password is null.")
+	@NotEmpty(message = "password is empty.")
+	private String Password;
+
+}

@@ -1,0 +1,33 @@
+package com.hrm.attendance;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AttendanceService {
+	@Autowired
+	private AttendanceDAO dao;
+	
+	public List<Attendance> getUserAttendance(int userid){
+		return dao.findByUserId(userid);
+	}
+	
+	public void	recordCheckIn(int userid) {//출근
+		
+        dao.findByUserId(userid);
+        dao.getCheckInTime(LocalDateTime.now());
+        dao.save(dao);
+    }
+	
+	public void recordCheckOut(int userid) {//퇴근
+		dao.findByUserId(userid);
+		dao.getCheckOutTime(LocalDateTime.now());
+		dao.save(dao);
+	}
+	
+	
+
+}

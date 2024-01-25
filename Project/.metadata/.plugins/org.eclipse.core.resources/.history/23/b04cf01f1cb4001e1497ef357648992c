@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Map" %>
+
+<%
+<form action="login" method="get" modelAttribute="login">
+<form:errors element="div"/>
+<label for="Username">id : </label><input name="Username" id="Username"><form:errors path="Username" delimiter=" "/> <br>
+<label for="Password">pw : </label><input name="Password" id="Password" type="Password"><form:errors path="Password" delimiter=" "/><br>
+<input type="submit" value="로그인">
+    
+%>

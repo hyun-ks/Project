@@ -1,0 +1,34 @@
+package com.hrm.attendance;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hrm.emp.Employee;
+
+@Service
+public class AttendanceService {
+	@Autowired
+	private AttendanceDAO dao;
+	
+	public int insert(Attendance saveatt) {
+		return dao.insert(saveatt);
+	}
+	public void updateCheckTime(String userid, String checktime) {
+		
+	}
+	
+	public List<Attendance> viewall(){
+		return dao.attview();
+	}
+	public List<Employee>  empviewall(){
+		return dao.empview();
+	}
+	
+
+	
+	
+
+}

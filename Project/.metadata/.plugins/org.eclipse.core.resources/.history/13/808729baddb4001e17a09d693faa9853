@@ -1,0 +1,30 @@
+package com.hrm.attendance;
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hrm.emp.EmpService;
+import com.hrm.emp.Employee;
+
+@Mapper
+public interface AttendanceDAO {
+	
+	 @Select("select * from em_info where userid = #{userid}")
+	 List<Employee>empview();
+	 
+	 @Select("select * from em_att where userid = #{userid}")
+	 List<Attendance> attview();
+	 
+	 @Insert("insert into em_att(userid, checkTime) values(#{userid}, #{checkInTime})")
+	 int insert(Attendance saveatt);
+	 
+	 @Update("update em_data set checktime = #{checktime} where userid = #{userid}")
+	 void updateCheckTime(@Param("userid") String userId, @Param("checktime") String checkTime);
+	 
+}

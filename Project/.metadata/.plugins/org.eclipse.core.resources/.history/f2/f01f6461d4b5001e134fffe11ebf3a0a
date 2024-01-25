@@ -1,0 +1,20 @@
+package com.hrm.auth;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import com.hrm.emp.Employee;
+
+@Mapper
+public interface AuthDAO {
+	
+	@Select("select * from em_info natural join em_rank")
+    List<Auth> auth();
+	
+	@Select("select * from em_info natural join em_rank where ranknum = #{ranknum}")
+	int authfind();
+	
+
+}
